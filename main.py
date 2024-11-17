@@ -1,6 +1,6 @@
 from board import boards
 
-class Soduku():
+class Sudoku():
     def __init__(self, board: list[list[int]]) -> None:
         self.board = board
     def validate(self):
@@ -21,6 +21,19 @@ class Soduku():
         
         return True
 
-test = Soduku(boards["easiest"])
-print(test.validate())
+test = Sudoku(boards["easiest"])
+# print(test.validate())
 
+def solve(sudoku):
+    linboard = [cell for row in sudoku.board for cell in row]
+    focus = 0
+    direction = 1
+
+    print(linboard)
+
+    # while focus <= len(linboard):
+    #     elif lineditboard[focus] < 0:
+    #         lineditboard
+
+
+print(solve(test))
